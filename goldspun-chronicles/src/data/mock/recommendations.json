@@ -1,0 +1,54 @@
+{
+  "recommendations": [
+    {
+      "type": "BUY",
+      "item": "Essence of Fire",
+      "itemId": "12348",
+      "realm": "Silvermoon",
+      "reason": "Undervalued 22% below regional median",
+      "confidence": 0.86,
+      "currentPrice": 3200,
+      "suggestedAction": "Buy up to 3950g per unit"
+    },
+    {
+      "type": "SELL",
+      "item": "Arcane Crystal",
+      "itemId": "12349",
+      "realm": "Kazzak",
+      "reason": "Price spike of 31% in past 24h",
+      "confidence": 0.91,
+      "currentPrice": 15600,
+      "suggestedAction": "List at current market price"
+    },
+    {
+      "type": "WATCH",
+      "item": "Felcloth",
+      "itemId": "12350",
+      "realm": "Draenor",
+      "reason": "Volatility rising; good flip potential",
+      "confidence": 0.78,
+      "currentPrice": 890,
+      "suggestedAction": "Monitor for price dips below 750g"
+    },
+    {
+      "type": "BUY",
+      "item": "Rousing Fire",
+      "itemId": "12345",
+      "realm": "Tarren Mill",
+      "reason": "Strong upward trend, low competition",
+      "confidence": 0.82,
+      "currentPrice": 1450,
+      "suggestedAction": "Accumulate for weekend demand spike"
+    },
+    {
+      "type": "SELL",
+      "item": "Illimited Diamond",
+      "itemId": "12347",
+      "realm": "Ravencrest",
+      "reason": "Peak pricing window detected",
+      "confidence": 0.88,
+      "currentPrice": 24500,
+      "suggestedAction": "List aggressively before reset"
+    }
+  ]
+}

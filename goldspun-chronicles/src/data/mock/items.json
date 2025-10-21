@@ -1,0 +1,68 @@
+[
+  {
+    "id": "12345",
+    "name": "Rousing Fire",
+    "quality": "uncommon",
+    "minPrice": 1450,
+    "avgPrice": 1580,
+    "medianPrice": 1520,
+    "volume": 87,
+    "change24h": 12.5,
+    "icon": "inv_fire_rousing"
+  },
+  {
+    "id": "12346",
+    "name": "Primal Chaos",
+    "quality": "rare",
+    "minPrice": 8920,
+    "avgPrice": 9200,
+    "medianPrice": 9050,
+    "volume": 45,
+    "change24h": -5.3,
+    "icon": "inv_chaos_primal"
+  },
+  {
+    "id": "12347",
+    "name": "Illimited Diamond",
+    "quality": "epic",
+    "minPrice": 24500,
+    "avgPrice": 25800,
+    "medianPrice": 25200,
+    "volume": 12,
+    "change24h": 8.7,
+    "icon": "inv_diamond_illimited"
+  },
+  {
+    "id": "12348",
+    "name": "Essence of Fire",
+    "quality": "rare",
+    "minPrice": 3200,
+    "avgPrice": 3450,
+    "medianPrice": 3350,
+    "volume": 156,
+    "change24h": 15.2,
+    "icon": "inv_essence_fire"
+  },
+  {
+    "id": "12349",
+    "name": "Arcane Crystal",
+    "quality": "epic",
+    "minPrice": 15600,
+    "avgPrice": 16200,
+    "medianPrice": 15900,
+    "volume": 23,
+    "change24h": 31.0,
+    "icon": "inv_crystal_arcane"
+  },
+  {
+    "id": "12350",
+    "name": "Felcloth",
+    "quality": "uncommon",
+    "minPrice": 890,
+    "avgPrice": 920,
+    "medianPrice": 905,
+    "volume": 234,
+    "change24h": -2.1,
+    "icon": "inv_cloth_fel"
+  }
+]

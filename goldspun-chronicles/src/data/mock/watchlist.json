@@ -1,0 +1,35 @@
+[
+  {
+    "id": "w1",
+    "itemId": "12345",
+    "itemName": "Rousing Fire",
+    "quality": "uncommon",
+    "currentPrice": 1450,
+    "change24h": 12.5,
+    "alertCondition": "Price < 1200g",
+    "alertEnabled": true,
+    "status": "normal"
+  },
+  {
+    "id": "w2",
+    "itemId": "12346",
+    "itemName": "Primal Chaos",
+    "quality": "rare",
+    "currentPrice": 8920,
+    "change24h": -5.3,
+    "alertCondition": "Drop > 10%",
+    "alertEnabled": true,
+    "status": "normal"
+  },
+  {
+    "id": "w3",
+    "itemId": "12349",
+    "itemName": "Arcane Crystal",
+    "quality": "epic",
+    "currentPrice": 15600,
+    "change24h": 31.0,
+    "alertCondition": "Spike > 25%",
+    "alertEnabled": true,
+    "status": "triggered"
+  }
+]
