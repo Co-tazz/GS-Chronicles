@@ -19,14 +19,23 @@ async function fetchAndCacheToken() {
       );
       // Append to history and prune entries older than 7 days
       const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      
+      // First, add the new data point
       await TokenHistory.findOneAndUpdate(
         { region },
         {
           $push: { data: { timestamp: now, price } },
           $set: { updatedAt: now },
-          $pull: { data: { timestamp: { $lt: sevenDaysAgo } } },
         },
         { upsert: true, new: true }
+      );
+      
+      // Then, remove old entries in a separate operation
+      await TokenHistory.findOneAndUpdate(
+        { region },
+        {
+          $pull: { data: { timestamp: { $lt: sevenDaysAgo } } },
+        }
       );
       info('Token cached', { region, price });
       return doc;
