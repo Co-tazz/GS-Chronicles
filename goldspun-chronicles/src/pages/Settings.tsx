@@ -47,7 +47,8 @@ export default function Settings() {
       
       // Save to backend if user is authenticated
       if (user) {
-        const response = await fetch('/api/auth/settings', {
+        const API_BASE = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/$/, "");
+        const response = await fetch(`${API_BASE}/api/auth/settings`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
