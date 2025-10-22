@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { ConfidenceMeter } from "./ConfidenceMeter";
+import { formatGold } from "@/lib/utils";
 
 interface BackendRecommendation {
   id: string;
@@ -50,7 +51,7 @@ export const RecommendationCard = ({ recommendation }: RecommendationCardProps) 
             <p className="text-sm text-foreground mb-1">{recommendation.rationale}</p>
           )}
           {recommendation.targetPrice != null && (
-            <p className="text-xs text-accent font-medium">Target Price: {Math.round(recommendation.targetPrice).toLocaleString()}g</p>
+            <p className="text-xs text-accent font-medium">Target Price: {formatGold(Math.round(recommendation.targetPrice))}g</p>
           )}
         </div>
 

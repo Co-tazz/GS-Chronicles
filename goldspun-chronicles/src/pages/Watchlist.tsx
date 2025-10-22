@@ -17,6 +17,7 @@ import watchlistData from "@/data/mock/watchlist.json";
 import { WatchlistForm } from "@/components/watchlist/WatchlistForm";
 import { ActiveAlerts } from "@/components/watchlist/ActiveAlerts";
 import { AlertHistory } from "@/components/watchlist/AlertHistory";
+import { formatGold } from "@/lib/utils";
 
 const qualityColors = {
   poor: "text-gray-500",
@@ -112,7 +113,7 @@ export default function Watchlist() {
                       </TableCell>
                       <TableCell>
                         <span className="text-primary font-semibold">
-                          {item.currentPrice.toLocaleString()}g
+                          {formatGold(item.currentPrice)}g
                         </span>
                       </TableCell>
                       <TableCell>

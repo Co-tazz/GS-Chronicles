@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { TrendingUp, TrendingDown, Coins, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { formatGold } from "@/lib/utils";
 
 const API_BASE = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/$/, "");
 const apiUrl = (p: string) => `${API_BASE}/api${p}`;
@@ -67,7 +68,7 @@ export default function WoWToken() {
             <div className="space-y-4">
               <div className="flex items-baseline gap-3">
                 <span className="text-5xl font-bold text-primary">
-                  {currentPrice.toLocaleString()}
+                  {formatGold(currentPrice)}
                 </span>
                 <span className="text-2xl text-muted-foreground">gold</span>
               </div>

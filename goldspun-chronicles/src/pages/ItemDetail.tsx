@@ -8,6 +8,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import itemsData from "@/data/mock/items.json";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { formatGold } from "@/lib/utils";
 
 const qualityColors = {
   poor: "text-gray-500",
@@ -112,7 +113,7 @@ export default function ItemDetail() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Median Price</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-foreground">{item.medianPrice.toLocaleString()}g</p>
+            <p className="text-2xl font-bold text-foreground">{formatGold(item.medianPrice)}g</p>
           </CardContent>
         </Card>
         <Card className="panel-ornate">
@@ -169,7 +170,7 @@ export default function ItemDetail() {
               <CardContent className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Average Price</span>
-                  <span className="font-semibold">{item.avgPrice.toLocaleString()}g</span>
+                  <span className="font-semibold">{formatGold(item.avgPrice)}g</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Volume (24h)</span>

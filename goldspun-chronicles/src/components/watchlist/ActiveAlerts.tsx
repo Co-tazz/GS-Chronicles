@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TrendingDown, TrendingUp, Check, X } from "lucide-react";
+import { formatGold } from "@/lib/utils";
 
 interface Alert {
   id: string;
@@ -98,13 +99,13 @@ export function ActiveAlerts({ alerts = mockAlerts, onAcknowledge, onDismiss }: 
                 <div>
                   <span className="text-muted-foreground">Current Price:</span>
                   <span className="ml-2 font-semibold text-primary">
-                    {alert.currentPrice.toLocaleString()}g
+                    {formatGold(alert.currentPrice)}g
                   </span>
                 </div>
                 <div>
                   <span className="text-muted-foreground">Threshold:</span>
                   <span className="ml-2 font-semibold text-foreground">
-                    {alert.threshold.toLocaleString()}g
+                    {formatGold(alert.threshold)}g
                   </span>
                 </div>
               </div>

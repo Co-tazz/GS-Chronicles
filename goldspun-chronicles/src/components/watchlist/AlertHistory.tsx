@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { formatGold } from "@/lib/utils";
 
 interface HistoricalAlert {
   id: string;
@@ -125,10 +126,10 @@ export function AlertHistory({ alerts = mockHistory }: AlertHistoryProps) {
                   </Badge>
                 </TableCell>
                 <TableCell className="font-semibold text-primary">
-                  {alert.triggeredPrice.toLocaleString()}g
+                  {formatGold(alert.triggeredPrice)}g
                 </TableCell>
                 <TableCell className="text-muted-foreground">
-                  {alert.threshold.toLocaleString()}g
+                  {formatGold(alert.threshold)}g
                 </TableCell>
                 <TableCell>
                   <Badge

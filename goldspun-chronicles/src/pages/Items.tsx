@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/table";
 import itemsData from "@/data/mock/items.json";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { formatGold } from "@/lib/utils";
 
 const qualityColors = {
   poor: "text-gray-500",
@@ -156,13 +157,13 @@ export default function Items() {
                     </span>
                   </TableCell>
                   <TableCell className="text-primary font-semibold">
-                    {item.minPrice.toLocaleString()}g
+                    {formatGold(item.minPrice)}g
                   </TableCell>
                   <TableCell className="text-muted-foreground">
-                    {item.avgPrice.toLocaleString()}g
+                    {formatGold(item.avgPrice)}g
                   </TableCell>
                   <TableCell className="text-muted-foreground">
-                    {item.medianPrice.toLocaleString()}g
+                    {formatGold(item.medianPrice)}g
                   </TableCell>
                   <TableCell className="text-muted-foreground">{item.volume}</TableCell>
                   <TableCell>
