@@ -79,7 +79,8 @@ async function getAuctionData(connectedRealmId) {
 
 async function getTokenPrice() {
   try {
-    return await requestWithRetry('/data/wow/token/index');
+    const region = process.env.REGION || 'eu';
+    return await requestWithRetry('/data/wow/token/index', { namespace: `dynamic-${region}` });
   } catch (e) {
     error('getTokenPrice failed', { message: e.message });
     throw e;
